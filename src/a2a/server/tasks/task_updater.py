@@ -109,7 +109,9 @@ class TaskUpdater:
 
     async def reject(self, message: Message | None = None):
         """Marks the task as rejected and publishes a final status update."""
-        await self.update_status(TaskState.rejected, message=message, final=True)
+        await self.update_status(
+            TaskState.rejected, message=message, final=True
+        )
 
     async def submit(self, message: Message | None = None):
         """Marks the task as submitted and publishes a status update."""

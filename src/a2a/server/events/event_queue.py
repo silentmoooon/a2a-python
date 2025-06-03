@@ -29,9 +29,8 @@ class EventQueue:
     to create child queues that receive the same events.
     """
 
-    def __init__(self, max_queue_size=DEFAULT_MAX_QUEUE_SIZE) -> None:
+    def __init__(self, max_queue_size: int = DEFAULT_MAX_QUEUE_SIZE) -> None:
         """Initializes the EventQueue."""
-
         # Make sure the `asyncio.Queue` is bounded.
         # If it's unbounded (maxsize=0), then `queue.put()` never needs to wait,
         # and so the streaming won't work correctly.

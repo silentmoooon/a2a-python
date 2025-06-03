@@ -146,9 +146,7 @@ async def test_complete_without_message(task_updater, event_queue):
 
 
 @pytest.mark.asyncio
-async def test_complete_with_message(
-    task_updater, event_queue, sample_message
-):
+async def test_complete_with_message(task_updater, event_queue, sample_message):
     """Test marking a task as completed with a message."""
     await task_updater.complete(message=sample_message)
 
@@ -176,9 +174,7 @@ async def test_submit_without_message(task_updater, event_queue):
 
 
 @pytest.mark.asyncio
-async def test_submit_with_message(
-    task_updater, event_queue, sample_message
-):
+async def test_submit_with_message(task_updater, event_queue, sample_message):
     """Test marking a task as submitted with a message."""
     await task_updater.submit(message=sample_message)
 
