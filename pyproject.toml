@@ -82,6 +82,7 @@ dev = [
   "uv-dynamic-versioning>=0.8.2",
   "types-protobuf",
   "types-requests",
+  "pre-commit",
 ]
 
 [[tool.uv.index]]
