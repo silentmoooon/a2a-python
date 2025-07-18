@@ -33,6 +33,12 @@ When you're working within a uv project or a virtual environment managed by uv, 
 uv add a2a-sdk
 ```
 
+To install with gRPC support:
+
+```bash
+uv add "a2a-sdk[grpc]"
+```
+
 To install with database support:
 
 ```bash
@@ -55,6 +61,12 @@ If you prefer to use pip, the standard Python package installer, you can install
 
 ```bash
 pip install a2a-sdk
+```
+
+To install with gRPC support:
+
+```bash
+pip install "a2a-sdk[grpc]"
 ```
 
 To install with database support:
