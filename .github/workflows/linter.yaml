@@ -1,7 +1,7 @@
 ---
 name: Lint Code Base
 on:
-  pull_request:
+  push:
     branches: [main]
 permissions:
   contents: read
@@ -64,6 +64,6 @@ jobs:
                 "${{ steps.mypy.outcome }}" == "failure" || \
                 "${{ steps.pyright.outcome }}" == "failure" || \
                 "${{ steps.jscpd.outcome }}" == "failure" ]]; then
-            echo "One or more linting/checking steps failed."
+            echo "One or more linting/checking steps failed. ruff-lint: ${{ steps.ruff-lint.outcome }}, ruff-format: ${{ steps.ruff-format.outcome }}, mypy: ${{ steps.mypy.outcome }}, pyright: ${{ steps.pyright.outcome }}, jscpd: ${{ steps.jscpd.outcome }}"
             exit 1
           fi
